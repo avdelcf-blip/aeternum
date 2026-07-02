@@ -338,104 +338,304 @@
                 <div class="group relative overflow-hidden rounded-2xl bg-brand-light dark:bg-brand-darkcard shadow-lg reveal">
                     <div class="w-full h-72 bg-white dark:bg-gray-800 p-4 flex items-center justify-center">
                         <!-- Placeholder Imagen -->
-                        <img src="natalia.jpeg" alt="Natalia Huertas" class="w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                        <img src="natalia.jpeg" alt="Natalia Huertas" onclick="toggleCV('cv-natalia')" class="cursor-pointer w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
                     </div>
                     <div class="p-6 text-center">
                         <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white">Natalia Huertas</h4>
                         <p class="text-brand-gold text-sm font-medium mb-4">Derecho Penal</p>
                         <div class="flex justify-center space-x-4">
-                            <a href="https://www.instagram.com/nataliahuertas.derecho/" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/natalia-undefined-259051418/" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/nataliahuertas.derecho/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/natalia-undefined-259051418/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
                         </div>
+                        <div id="cv-natalia" class="overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out w-full text-left">
+      <!-- Usamos grid-cols-1 para celulares y sm:grid-cols-2 para pantallas más grandes -->
+      <div class="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <!-- Columna 1: Currículum / Resumen -->
+        <div>
+          <p class="text-xs text-brand-blue dark:text-white font-bold mb-1 uppercase tracking-wider">Resumen Profesional</p>
+          <ul class="text-xs text-gray-600 dark:text-gray-300 list-disc pl-4 space-y-1">
+            <li>Especialista en litigación penal.</li>
+            <li>Magíster en Derecho Penal.</li>
+            <li>10 años de experiencia.</li>
+          </ul>
+        </div>
+
+        <!-- Columna 2: Casos que resuelve -->
+        <div>
+          <p class="text-xs text-brand-blue dark:text-white font-bold mb-1 uppercase tracking-wider">Casos que Resuelve</p>
+          <ul class="text-xs text-gray-600 dark:text-gray-300 list-disc pl-4 space-y-1">
+            <li>Homicidio</li>
+            <li>Feminicidio</li>
+            <li>Extorsion</li>
+            <li>Violacion Sexual</li>
+            <li>Acoso Sexual</li>
+            <li>Violacion Sexual</li>
+            <li>Lavado de activos</li>
+            <li>Daños a la propiedad</li>
+            <li>Delitos informáticos</li>
+            <li>Etc</li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
                     </div>
                 </div>
 
                 <!-- Perfil 2 -->
                 <div class="group relative overflow-hidden rounded-2xl bg-brand-light dark:bg-brand-darkcard shadow-lg reveal" style="transition-delay: 100ms;">
                     <div class="w-full h-72 bg-white dark:bg-gray-800 p-4 flex items-center justify-center">
-                        <img src="gabriela.jpeg" alt="Gabriela Carlos" class="w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                        <img src="gabriela.jpeg" alt="Gabriela Carlos" onclick="toggleCV('cv-gabriela')" class="cursor-pointer w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
                     </div>
                     <div class="p-6 text-center">
                         <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white">Gabriela Carlos</h4>
                         <p class="text-brand-gold text-sm font-medium mb-4">Abogada Conciliadora</p>
                         <div class="flex justify-center space-x-4">
-                            <a href="https://www.instagram.com/dvidalcentrodeconciliacion?igsh=MXRzYmIxam15YTkybQ==" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/gabriela-carlos-vidal-bb3b67417?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/dvidalcentrodeconciliacion?igsh=MXRzYmIxam15YTkybQ==" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/gabriela-carlos-vidal-bb3b67417?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
                         </div>
+                        <!-- ========================================================= -->
+    <!-- NUEVO BLOQUE DEL CURRÍCULUM EN 2 COLUMNAS                 -->
+    <!-- ========================================================= -->
+    <div id="cv-gabriela" class="overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out w-full text-left">
+      <!-- Usamos grid-cols-1 para celulares y sm:grid-cols-2 para pantallas más grandes -->
+      <div class="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <!-- Columna 1: Currículum / Resumen -->
+        <div>
+          <p class="text-xs text-brand-blue dark:text-white font-bold mb-1 uppercase tracking-wider">Resumen Profesional</p>
+          <ul class="text-xs text-gray-600 dark:text-gray-300 list-disc pl-4 space-y-1">
+            <li>Especialista en conciliación.</li>
+            <li>Magíster en Gestion Publica.</li>
+            <li>15 años de experiencia.</li>
+          </ul>
+        </div>
+
+        <!-- Columna 2: Casos que resuelve -->
+        <div>
+          <p class="text-xs text-brand-blue dark:text-white font-bold mb-1 uppercase tracking-wider">Casos que Resuelve</p>
+          <ul class="text-xs text-gray-600 dark:text-gray-300 list-disc pl-4 space-y-1">
+            <li>Pension de alimentos.</li>
+            <li>Incumplimineto de contratos.</li>
+            <li>Division y partición de bienes.</li>
+            <li>Pago de alquileres atrasados.</li>
+            <li>Conflictos entre vecinos.</li>
+            <li>Tenencia de hijos.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <!-- ========================================================= -->
                     </div>
                 </div>
 
                 <!-- Perfil 3 -->
                 <div class="group relative overflow-hidden rounded-2xl bg-brand-light dark:bg-brand-darkcard shadow-lg reveal" style="transition-delay: 200ms;">
                     <div class="w-full h-72 bg-white dark:bg-gray-800 p-4 flex items-center justify-center">
-                        <img src="Neftali.jpeg" alt="Neftali Ccari" class="w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                        <img src="Neftali.jpeg" alt="Neftali Ccari" onclick="toggleCV('cv-neftali')" class="cursor-pointer w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
                     </div>
                     <div class="p-6 text-center">
                         <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white">Neftali Ccari</h4>
                         <p class="text-brand-gold text-sm font-medium mb-4">Derecho Administrativo</p>
                         <div class="flex justify-center space-x-4">
-                            <a href="https://www.instagram.com/neftali.ccari?igsh=MW1xdDF4ODIwZGt6OQ==" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/neftalí-ccari-b6512810a?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/neftali.ccari?igsh=MW1xdDF4ODIwZGt6OQ==" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/neftalí-ccari-b6512810a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
                         </div>
+                        <!-- ========================================================= -->
+    <!-- NUEVO BLOQUE DEL CURRÍCULUM EN 2 COLUMNAS                 -->
+    <!-- ========================================================= -->
+    <div id="cv-neftali" class="overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out w-full text-left">
+      <!-- Usamos grid-cols-1 para celulares y sm:grid-cols-2 para pantallas más grandes -->
+      <div class="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <!-- Columna 1: Currículum / Resumen -->
+        <div>
+          <p class="text-xs text-brand-blue dark:text-white font-bold mb-1 uppercase tracking-wider">Resumen Profesional</p>
+          <ul class="text-xs text-gray-600 dark:text-gray-300 list-disc pl-4 space-y-1">
+            <li>Especialista en Derecho civil.</li>
+            <li>Magíster en Derecho Civil.</li>
+            <li>15 años de experiencia.</li>
+          </ul>
+        </div>
+
+        <!-- Columna 2: Casos que resuelve -->
+        <div>
+          <p class="text-xs text-brand-blue dark:text-white font-bold mb-1 uppercase tracking-wider">Casos que Resuelve</p>
+          <ul class="text-xs text-gray-600 dark:text-gray-300 list-disc pl-4 space-y-1">
+            <li>Contrataciones con el estado.</li>
+            <li>Licencia de edificación.</li>
+            <li>Nulidad de acto administrativo.</li>
+            <li>Reclamos contra entidades publicas.</li>
+            <li>Clausura de establecimientos comerciales.</li>
+            <li>Expropiacion de bienes del estado.</li>
+            <li>Procedimiento administrativo sancionador.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <!-- ========================================================= -->
                     </div>
                 </div>
 
                 <!-- Perfil 4 -->
                 <div class="group relative overflow-hidden rounded-2xl bg-brand-light dark:bg-brand-darkcard shadow-lg reveal">
                     <div class="w-full h-72 bg-white dark:bg-gray-800 p-4 flex items-center justify-center">
-                        <img src="vela.jpeg" alt="Evelyn Vela" class="w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                        <img src="vela.jpeg" alt="Evelyn Vela" onclick="toggleCV('cv-vela')" class="cursor-pointer w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
                     </div>
                     <div class="p-6 text-center">
                         <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white">Evelyn Vela</h4>
                         <p class="text-brand-gold text-sm font-medium mb-4">Derecho Laboral</p>
                         <div class="flex justify-center space-x-4">
-                            <a href="HTTPS://WWW.INSTAGRAM.COM/EV_JURIS?IGSH=MXR0NMPOZZFONXMXNG%3D%3D&UTM_SOURCE=QR" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/evelyn-vela-9bb053418/" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="HTTPS://WWW.INSTAGRAM.COM/EV_JURIS?IGSH=MXR0NMPOZZFONXMXNG%3D%3D&UTM_SOURCE=QR" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/evelyn-vela-9bb053418/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
                         </div>
+                        <!-- ========================================================= -->
+    <!-- NUEVO BLOQUE DEL CURRÍCULUM EN 2 COLUMNAS                 -->
+    <!-- ========================================================= -->
+    <div id="cv-vela" class="overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out w-full text-left">
+      <!-- Usamos grid-cols-1 para celulares y sm:grid-cols-2 para pantallas más grandes -->
+      <div class="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <!-- Columna 1: Currículum / Resumen -->
+        <div>
+          <p class="text-xs text-brand-blue dark:text-white font-bold mb-1 uppercase tracking-wider">Resumen Profesional</p>
+          <ul class="text-xs text-gray-600 dark:text-gray-300 list-disc pl-4 space-y-1">
+            <li>Especialista en procesos administrativos.</li>
+            <li>Magíster en Derecho Laboral</li>
+            <li>5 años de experiencia.</li>
+          </ul>
+        </div>
+
+        <!-- Columna 2: Casos que resuelve -->
+        <div>
+          <p class="text-xs text-brand-blue dark:text-white font-bold mb-1 uppercase tracking-wider">Casos que Resuelve</p>
+          <ul class="text-xs text-gray-600 dark:text-gray-300 list-disc pl-4 space-y-1">
+            <li>Hostigamiento laboral.</li>
+            <li>Accidente de trabajo.</li>
+            <li>Pago de gratificaciones.</li>
+            <li>Despido arbitrario.</li>
+            <li>Vacaciones no gozadas o pagadas.</li>
+            <li>Despido nulo.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <!-- ========================================================= -->
                     </div>
                 </div>
 
                 <!-- Perfil 5 -->
                 <div class="group relative overflow-hidden rounded-2xl bg-brand-light dark:bg-brand-darkcard shadow-lg reveal" style="transition-delay: 100ms;">
                     <div class="w-full h-72 bg-white dark:bg-gray-800 p-4 flex items-center justify-center">
-                        <img src="maycol.jpeg" alt="Maycol Calloapaza" class="w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                        <img src="maycol.jpeg" alt="Maycol Calloapaza" onclick="toggleCV('cv-maycol')" class="cursor-pointer w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
                     </div>
                     <div class="p-6 text-center">
                         <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white">Maycol Calloapaza</h4>
                         <p class="text-brand-gold text-sm font-medium mb-4">Derecho Civil</p>
                         <div class="flex justify-center space-x-4">
-                            <a href="https://www.tiktok.com/@justicia.prime?_r=1&_t=ZS-97cpUnKXGJW" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/justicia-prime-undefined-490aa1419?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.tiktok.com/@justicia.prime?_r=1&_t=ZS-97cpUnKXGJW" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/justicia-prime-undefined-490aa1419?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
                         </div>
+                        <!-- ========================================================= -->
+    <!-- NUEVO BLOQUE DEL CURRÍCULUM EN 2 COLUMNAS                 -->
+    <!-- ========================================================= -->
+    <div id="cv-maycol" class="overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out w-full text-left">
+      <!-- Usamos grid-cols-1 para celulares y sm:grid-cols-2 para pantallas más grandes -->
+      <div class="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <!-- Columna 1: Currículum / Resumen -->
+        <div>
+          <p class="text-xs text-brand-blue dark:text-white font-bold mb-1 uppercase tracking-wider">Resumen Profesional</p>
+          <ul class="text-xs text-gray-600 dark:text-gray-300 list-disc pl-4 space-y-1">
+            <li>Especialista en litigación.</li>
+            <li>Magíster en Derecho Civil.</li>
+            <li>10 años de experiencia.</li>
+          </ul>
+        </div>
+
+        <!-- Columna 2: Casos que resuelve -->
+        <div>
+          <p class="text-xs text-brand-blue dark:text-white font-bold mb-1 uppercase tracking-wider">Casos que Resuelve</p>
+          <ul class="text-xs text-gray-600 dark:text-gray-300 list-disc pl-4 space-y-1">
+            <li>Cmbio de nombre.</li>
+            <li>Desalojo.</li>
+            <li>Pension de alimentos.</li>.
+            <li>Cambio de hijos.</li>
+            <li>Otorgamiento de escritura publica.</li>
+            <li>Impugnacion de apternidad.</li>
+            <li>Peticion de herencia.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <!-- ========================================================= -->
                     </div>
                 </div>
 
                 <!-- Perfil 6 -->
                 <div class="group relative overflow-hidden rounded-2xl bg-brand-light dark:bg-brand-darkcard shadow-lg reveal" style="transition-delay: 200ms;">
                     <div class="w-full h-72 bg-white dark:bg-gray-800 p-4 flex items-center justify-center">
-                        <img src="nahi.jpeg" alt="Nahi Fernandez" class="w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                        <img src="nahi.jpeg" alt="Nahi Fernandez" onclick="toggleCV('cv-nahi')" class="cursor-pointer w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
                     </div>
                     <div class="p-6 text-center">
                         <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white">Nahi Fernandez</h4>
                         <p class="text-brand-gold text-sm font-medium mb-4">Derecho Médico</p>
                         <div class="flex justify-center space-x-4">
-                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/nahiabogatita?igsh=bXZ6NWhwbzFzNnFm" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/nahi-julieth-brittany-fernandez-illa-ba2557353/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
                         </div>
+                        <!-- ========================================================= -->
+    <!-- NUEVO BLOQUE DEL CURRÍCULUM EN 2 COLUMNAS                 -->
+    <!-- ========================================================= -->
+    <div id="cv-nahi" class="overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out w-full text-left">
+      <!-- Usamos grid-cols-1 para celulares y sm:grid-cols-2 para pantallas más grandes -->
+      <div class="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <!-- Columna 1: Currículum / Resumen -->
+        <div>
+          <p class="text-xs text-brand-blue dark:text-white font-bold mb-1 uppercase tracking-wider">Resumen Profesional</p>
+          <ul class="text-xs text-gray-600 dark:text-gray-300 list-disc pl-4 space-y-1">
+            <li>Especialista en legislacion sanitaria y bioetica.</li>
+            <li>Magíster en Derecho Forense.</li>
+            <li>10 años de experiencia.</li>
+          </ul>
+        </div>
+
+        <!-- Columna 2: Casos que resuelve -->
+        <div>
+          <p class="text-xs text-brand-blue dark:text-white font-bold mb-1 uppercase tracking-wider">Casos que Resuelve</p>
+          <ul class="text-xs text-gray-600 dark:text-gray-300 list-disc pl-4 space-y-1">
+            <li>Negligencia medica.</li>
+            <li>Responsabilidad civil de medicos y clinicas.</li>
+            <li>Indemnizacion por daños causados al paciente.</li>
+            <li>Mala praxis medica.</li>
+            <li>Error durante una cirugía.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <!-- ========================================================= -->
                     </div>
                 </div>
                 
                 <!-- Perfil 7 -->
                                 <div class="group relative overflow-hidden rounded-2xl bg-brand-light dark:bg-brand-darkcard shadow-lg reveal" style="transition-delay: 200ms;">
                     <div class="w-full h-72 bg-white dark:bg-gray-800 p-4 flex items-center justify-center">
-                        <img src="ruben.jpg" alt="Ruben Apaza" class="w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                        <img src="ruben.jpg" alt="Ruben Apaza" onclick="toggleCV('cv-ruben')" class="cursor-pointer w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
                     </div>
                     <div class="p-6 text-center">
                         <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white">Ruben Apaza</h4>
                         <p class="text-brand-gold text-sm font-medium mb-4">Especialista en Ciencias Contables, Administración, Informática Empresarial, Conocimiento aplicado de Derecho Tributario, Laboral y Comercial</p>
                         <div class="flex justify-center space-x-4">
-                            <a href="https://www.instagram.com/cpcrubenapaza/" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/ruben-l-apaza-a-b8642840/" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/cpcrubenapaza/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/ruben-l-apaza-a-b8642840/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
@@ -873,6 +1073,20 @@
             observer.observe(counters[0]);
         }
     </script>
+    <script>
+  function toggleCV(id) {
+    const elemento = document.getElementById(id);
+    if (elemento.classList.contains('max-h-0')) {
+      // Abre el currículum (efecto gota hacia abajo)
+      elemento.classList.remove('max-h-0', 'opacity-0', 'mt-0');
+      elemento.classList.add('max-h-[500px]', 'opacity-100', 'mt-4'); 
+    } else {
+      // Cierra el currículum
+      elemento.classList.add('max-h-0', 'opacity-0', 'mt-0');
+      elemento.classList.remove('max-h-[500px]', 'opacity-100', 'mt-4');
+    }
+  }
+</script>
 </body>
 </html>
 

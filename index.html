@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETERNUM Consultores Jurídicos S.A.C. | Excelencia Legal</title>
+    <meta name="description" content="El respaldo legal que necesitas, la voz que te defiende. Especialistas en Derecho Civil, Penal, Laboral, Médico y Administrativo en Perú.">
+    
+    <!-- Open Graph / SEO -->
+    <meta property="og:title" content="AETERNUM Consultores Jurídicos S.A.C.">
+    <meta property="og:description" content="Asesoría y patrocinio legal integral con ética y excelencia.">
+    <meta property="og:type" content="website">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración de Tailwind para paleta premium -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0A1128', // Azul sobrio profundo
+                            light: '#F8F9FA', // Blanco hueso
+                            gold: '#D4AF37', // Amarillo presidencial
+                            goldhover: '#B5952F',
+                            dark: '#121212', // Para dark mode
+                            darkcard: '#1E1E1E'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Poppins"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome y ScrollReveal -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Schema.org LegalService -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "AETERNUM CONSULTORES JURÍDICOS S.A.C.",
+      "image": "URL_DEL_LOGO",
+      "@id": "",
+      "url": "URL_DE_LA_WEB",
+      "telephone": "+51944195323",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ñaña Alameda",
+        "addressLocality": "Lurigancho - Chosica",
+        "addressRegion": "Lima",
+        "addressCountry": "PE"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:30",
+        "closes": "17:00"
+      }
+    }
+    </script>
+
+    <style>
+        /* Custom CSS para Glassmorphism y utilidades */
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .dark .glass {
+            background: rgba(18, 18, 18, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #D4AF37, #F3E5AB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #F8F9FA; }
+        .dark ::-webkit-scrollbar-track { background: #121212; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-brand-light dark:bg-brand-dark text-gray-800 dark:text-gray-200 font-sans antialiased transition-colors duration-300">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-serif font-bold text-2xl tracking-wider text-brand-blue dark:text-white" id="logo-text">
+                        AETERNUM<span class="text-brand-gold text-sm block font-sans tracking-widest uppercase">Consultores Jurídicos</span>
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-sm font-medium hover:text-brand-gold transition">Inicio</a>
+                    <a href="#nosotros" class="text-sm font-medium hover:text-brand-gold transition">Nosotros</a>
+                    <a href="#equipo" class="text-sm font-medium hover:text-brand-gold transition">Equipo</a>
+                    <a href="#especializaciones" class="text-sm font-medium hover:text-brand-gold transition">Especializaciones</a>
+                    <a href="#contacto" class="text-sm font-medium hover:text-brand-gold transition">Contacto</a>
+                    
+                    <!-- Dark Mode Toggle -->
+                    <button id="theme-toggle" class="text-gray-500 hover:text-brand-gold focus:outline-none">
+                        <i class="fas fa-moon text-xl hidden dark:block" id="theme-toggle-light-icon"></i>
+                        <i class="fas fa-sun text-xl dark:hidden" id="theme-toggle-dark-icon"></i>
+                    </button>
+                    
+                    <a href="#consultas" class="bg-brand-gold hover:bg-brand-goldhover text-white px-6 py-2 rounded-full text-sm font-semibold transition shadow-lg">Agendar Cita</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-800 dark:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-brand-darkcard absolute w-full border-t border-gray-200 dark:border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-lg">
+                <a href="#inicio" class="block px-3 py-2 text-base font-medium hover:text-brand-gold">Inicio</a>
+                <a href="#nosotros" class="block px-3 py-2 text-base font-medium hover:text-brand-gold">Nosotros</a>
+                <a href="#equipo" class="block px-3 py-2 text-base font-medium hover:text-brand-gold">Equipo</a>
+                <a href="#especializaciones" class="block px-3 py-2 text-base font-medium hover:text-brand-gold">Especializaciones</a>
+                <a href="#consultas" class="block px-3 py-2 text-base font-medium text-brand-gold">Agendar Cita</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <!-- Placeholder for High-Res Law Firm Image -->
+            <img src="banner.png" alt="Estudio Jurídico" class="w-full h-full object-cover object-center" loading="lazy">
+            <div class="absolute inset-0 bg-brand-blue/80 dark:bg-brand-blue/90"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16 reveal">
+            <h1 class="font-serif text-5xl md:text-7xl text-white font-bold mb-6 leading-tight">
+                El respaldo legal que necesitas, <br>
+                <span class="text-gradient">la voz que te defiende.</span>
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-3xl mx-auto font-light">
+                Brindamos asesoría y patrocinio legal integral, ofreciendo soluciones jurídicas eficientes, éticas y personalizadas para personas, empresas e instituciones.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#consultas" class="w-full sm:w-auto bg-brand-gold hover:bg-brand-goldhover text-white px-8 py-4 rounded-full font-semibold transition duration-300 shadow-[0_0_20px_rgba(212,175,55,0.4)]">
+                    Solicitar Consulta
+                </a>
+                <a href="https://wa.me/51944195323" target="_blank" class="w-full sm:w-auto glass text-white hover:bg-white/20 px-8 py-4 rounded-full font-semibold transition duration-300 flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-xl"></i> Contactar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentación Institucional -->
+    <section class="py-24 bg-white dark:bg-brand-dark" id="nosotros">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal-left">
+                    <h2 class="text-brand-gold font-semibold tracking-widest uppercase text-sm mb-2">Sobre Nosotros</h2>
+                    <h3 class="font-serif text-4xl md:text-5xl text-brand-blue dark:text-white font-bold mb-6 leading-tight">
+                        Compromiso, Ética y <br>Excelencia Jurídica.
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                        En AETERNUM CONSULTORES JURÍDICOS S.A.C. brindamos asesoría y patrocinio legal integral, ofreciendo soluciones jurídicas eficientes, éticas y personalizadas para personas, empresas e instituciones.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                        Nuestro equipo de profesionales está comprometido con la defensa de los derechos e intereses de nuestros clientes, proporcionando un servicio basado en la confianza, la responsabilidad y la excelencia.
+                    </p>
+                    
+                    <!-- Contador Animado -->
+                    <div class="flex items-center gap-6 p-6 bg-brand-light dark:bg-brand-darkcard rounded-2xl border-l-4 border-brand-gold shadow-sm">
+                        <div class="text-5xl font-serif text-brand-gold font-bold">
+                            +<span class="counter" data-target="5">0</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-brand-blue dark:text-white text-lg">Años de Experiencia</p>
+                            <p class="text-sm text-gray-500">Defendiendo tus derechos con resultados probados.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-6 reveal-right">
+                    <!-- Valores -->
+                    <div class="space-y-6">
+                        <div class="bg-brand-light dark:bg-brand-darkcard p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+                            <i class="fas fa-scale-balanced text-brand-gold text-3xl mb-4"></i>
+                            <h4 class="font-semibold text-brand-blue dark:text-white mb-2">Justicia & Ética</h4>
+                            <p class="text-sm text-gray-500">Actuamos con total rectitud profesional.</p>
+                        </div>
+                        <div class="bg-brand-light dark:bg-brand-darkcard p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+                            <i class="fas fa-lock text-brand-gold text-3xl mb-4"></i>
+                            <h4 class="font-semibold text-brand-blue dark:text-white mb-2">Confidencialidad</h4>
+                            <p class="text-sm text-gray-500">Absoluta reserva en el manejo de su información.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-6 mt-12">
+                        <div class="bg-brand-light dark:bg-brand-darkcard p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+                            <i class="fas fa-handshake text-brand-gold text-3xl mb-4"></i>
+                            <h4 class="font-semibold text-brand-blue dark:text-white mb-2">Transparencia</h4>
+                            <p class="text-sm text-gray-500">Comunicación clara en cada etapa del proceso.</p>
+                        </div>
+                        <div class="bg-brand-light dark:bg-brand-darkcard p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+                            <i class="fas fa-bullseye text-brand-gold text-3xl mb-4"></i>
+                            <h4 class="font-semibold text-brand-blue dark:text-white mb-2">Responsabilidad</h4>
+                            <p class="text-sm text-gray-500">Compromiso total con el éxito de su caso.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Especializaciones -->
+    <section class="py-24 bg-brand-light dark:bg-[#181818]" id="especializaciones">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-brand-gold font-semibold tracking-widest uppercase text-sm mb-2">Áreas de Práctica</h2>
+                <h3 class="font-serif text-4xl text-brand-blue dark:text-white font-bold">Nuestras Especializaciones</h3>
+                <div class="w-24 h-1 bg-brand-gold mx-auto mt-6 rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="group bg-white dark:bg-brand-darkcard p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none border border-transparent hover:border-brand-gold transition-all duration-300 reveal">
+                    <div class="w-14 h-14 bg-brand-blue dark:bg-brand-blue/50 text-brand-gold rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white mb-3">Derecho Civil</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Asesoría en contratos, sucesiones, propiedades y litigios civiles garantizando la protección de su patrimonio.</p>
+                    <a href="#consultas" class="text-brand-gold font-medium text-sm hover:underline flex items-center gap-2">Solicitar asesoría <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white dark:bg-brand-darkcard p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none border border-transparent hover:border-brand-gold transition-all duration-300 reveal" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-brand-blue dark:bg-brand-blue/50 text-brand-gold rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white mb-3">Derecho Penal</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Defensa técnica rigurosa y estratégica en investigaciones y procesos penales, protegiendo su libertad y garantías.</p>
+                    <a href="#consultas" class="text-brand-gold font-medium text-sm hover:underline flex items-center gap-2">Solicitar asesoría <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white dark:bg-brand-darkcard p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none border border-transparent hover:border-brand-gold transition-all duration-300 reveal" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-brand-blue dark:bg-brand-blue/50 text-brand-gold rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white mb-3">Derecho Laboral</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Protección ante despidos arbitrarios, reclamos de beneficios sociales y asesoría preventiva para empresas.</p>
+                    <a href="#consultas" class="text-brand-gold font-medium text-sm hover:underline flex items-center gap-2">Solicitar asesoría <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white dark:bg-brand-darkcard p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none border border-transparent hover:border-brand-gold transition-all duration-300 reveal">
+                    <div class="w-14 h-14 bg-brand-blue dark:bg-brand-blue/50 text-brand-gold rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-handshake-angle"></i>
+                    </div>
+                    <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white mb-3">Conciliación</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Mecanismos alternativos de resolución de conflictos para llegar a acuerdos rápidos, evitando largos procesos judiciales.</p>
+                    <a href="#consultas" class="text-brand-gold font-medium text-sm hover:underline flex items-center gap-2">Solicitar asesoría <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="group bg-white dark:bg-brand-darkcard p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none border border-transparent hover:border-brand-gold transition-all duration-300 reveal" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-brand-blue dark:bg-brand-blue/50 text-brand-gold rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-user-doctor"></i>
+                    </div>
+                    <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white mb-3">Derecho Médico</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Asesoría especializada en negligencias médicas, responsabilidad profesional de la salud y auditoría legal médica.</p>
+                    <a href="#consultas" class="text-brand-gold font-medium text-sm hover:underline flex items-center gap-2">Solicitar asesoría <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="group bg-white dark:bg-brand-darkcard p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none border border-transparent hover:border-brand-gold transition-all duration-300 reveal" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-brand-blue dark:bg-brand-blue/50 text-brand-gold rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white mb-3">Derecho Administrativo</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Representación ante entidades públicas, municipalidades, ministerios y procedimientos sancionadores.</p>
+                    <a href="#consultas" class="text-brand-gold font-medium text-sm hover:underline flex items-center gap-2">Solicitar asesoría <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Asesoría Empresarial -->
+            <div class="mt-8 group bg-brand-blue dark:bg-brand-darkcard p-8 rounded-2xl border border-transparent hover:border-brand-gold transition-all duration-300 flex flex-col md:flex-row items-center justify-between reveal">
+                <div class="flex items-center gap-6 mb-4 md:mb-0">
+                    <div class="w-16 h-16 bg-white/10 text-brand-gold rounded-xl flex items-center justify-center text-3xl">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-2xl font-bold text-white mb-2">Asesoría Contable, Empresarial y Tributaria</h4>
+                        <p class="text-gray-300 text-sm max-w-2xl">Soluciones corporativas integrales para el desarrollo y cumplimiento normativo de su empresa. Optimización tributaria y blindaje legal societario.</p>
+                    </div>
+                </div>
+                <a href="#consultas" class="bg-brand-gold hover:bg-brand-goldhover text-white px-6 py-3 rounded-full font-semibold transition whitespace-nowrap">
+                    Consulta Corporativa
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuestro Equipo -->
+    <section class="py-24 bg-white dark:bg-brand-dark" id="equipo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-brand-gold font-semibold tracking-widest uppercase text-sm mb-2">Profesionales de Primer Nivel</h2>
+                <h3 class="font-serif text-4xl text-brand-blue dark:text-white font-bold">Nuestro Equipo</h3>
+                <div class="w-24 h-1 bg-brand-gold mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Abogados: Generados dinámicamente o estructurados -->
+                
+                <!-- Perfil 1 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-brand-light dark:bg-brand-darkcard shadow-lg reveal">
+                    <div class="w-full h-72 bg-white dark:bg-gray-800 p-4 flex items-center justify-center">
+                        <!-- Placeholder Imagen -->
+                        <img src="natalia.jpeg" alt="Natalia Huertas" class="w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white">Natalia Huertas</h4>
+                        <p class="text-brand-gold text-sm font-medium mb-4">Derecho Penal</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="https://www.instagram.com/nataliahuertas.derecho/" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/natalia-undefined-259051418/" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Perfil 2 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-brand-light dark:bg-brand-darkcard shadow-lg reveal" style="transition-delay: 100ms;">
+                    <div class="w-full h-72 bg-white dark:bg-gray-800 p-4 flex items-center justify-center">
+                        <img src="gabriela.jpeg" alt="Gabriela Carlos" class="w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white">Gabriela Carlos</h4>
+                        <p class="text-brand-gold text-sm font-medium mb-4">Abogada Conciliadora</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="https://www.instagram.com/dvidalcentrodeconciliacion?igsh=MXRzYmIxam15YTkybQ==" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/gabriela-carlos-vidal-bb3b67417?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Perfil 3 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-brand-light dark:bg-brand-darkcard shadow-lg reveal" style="transition-delay: 200ms;">
+                    <div class="w-full h-72 bg-white dark:bg-gray-800 p-4 flex items-center justify-center">
+                        <img src="Neftali.jpeg" alt="Neftali Ccari" class="w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white">Neftali Ccari</h4>
+                        <p class="text-brand-gold text-sm font-medium mb-4">Derecho Administrativo</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="https://www.instagram.com/neftali.ccari?igsh=MW1xdDF4ODIwZGt6OQ==" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/neftalí-ccari-b6512810a?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Perfil 4 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-brand-light dark:bg-brand-darkcard shadow-lg reveal">
+                    <div class="w-full h-72 bg-white dark:bg-gray-800 p-4 flex items-center justify-center">
+                        <img src="vela.jpeg" alt="Evelyn Vela" class="w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white">Evelyn Vela</h4>
+                        <p class="text-brand-gold text-sm font-medium mb-4">Derecho Laboral</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="HTTPS://WWW.INSTAGRAM.COM/EV_JURIS?IGSH=MXR0NMPOZZFONXMXNG%3D%3D&UTM_SOURCE=QR" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/evelyn-vela-9bb053418/" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Perfil 5 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-brand-light dark:bg-brand-darkcard shadow-lg reveal" style="transition-delay: 100ms;">
+                    <div class="w-full h-72 bg-white dark:bg-gray-800 p-4 flex items-center justify-center">
+                        <img src="maycol.jpeg" alt="Maycol Calloapaza" class="w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white">Maycol Calloapaza</h4>
+                        <p class="text-brand-gold text-sm font-medium mb-4">Derecho Civil</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="https://www.tiktok.com/@justicia.prime?_r=1&_t=ZS-97cpUnKXGJW" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/justicia-prime-undefined-490aa1419?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Perfil 6 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-brand-light dark:bg-brand-darkcard shadow-lg reveal" style="transition-delay: 200ms;">
+                    <div class="w-full h-72 bg-white dark:bg-gray-800 p-4 flex items-center justify-center">
+                        <img src="nahi.jpeg" alt="Nahi Fernandez" class="w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white">Nahi Fernandez</h4>
+                        <p class="text-brand-gold text-sm font-medium mb-4">Derecho Médico</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Perfil 7 -->
+                                <div class="group relative overflow-hidden rounded-2xl bg-brand-light dark:bg-brand-darkcard shadow-lg reveal" style="transition-delay: 200ms;">
+                    <div class="w-full h-72 bg-white dark:bg-gray-800 p-4 flex items-center justify-center">
+                        <img src="ruben.jpg" alt="Ruben Apaza" class="w-full h-80 object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white">Ruben Apaza</h4>
+                        <p class="text-brand-gold text-sm font-medium mb-4">Especialista en Ciencias Contables, Administración, Informática Empresarial, Conocimiento aplicado de Derecho Tributario, Laboral y Comercial</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="https://www.instagram.com/cpcrubenapaza/" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-gold hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/ruben-l-apaza-a-b8642840/" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-brand-blue hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios (Carrusel CSS) -->
+    <section class="py-24 bg-brand-blue relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="a" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M0 40V0h40v40H0zm20-20a20 20 0 100-40 20 20 0 000 40z" fill="#FFF" fill-rule="evenodd"/></pattern></defs><rect width="100%" height="100%" fill="url(#a)"/></svg>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-brand-gold font-semibold tracking-widest uppercase text-sm mb-2">Casos de Éxito</h2>
+                <h3 class="font-serif text-4xl text-white font-bold">Lo que dicen nuestros clientes</h3>
+            </div>
+            
+            <div class="flex overflow-x-auto gap-6 snap-x snap-mandatory pb-8 scrollbar-hide" style="-ms-overflow-style: none; scrollbar-width: none;">
+                <!-- Testimonio 1 -->
+                <div class="snap-center shrink-0 w-80 md:w-[400px] bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl">
+                    <div class="text-brand-gold mb-4 text-2xl"><i class="fas fa-quote-left"></i></div>
+                    <h4 class="text-white font-semibold mb-3">Excelente atención y profesionalismo.</h4>
+                    <p class="text-gray-300 text-sm italic mb-6">"El equipo de AETERNUM CONSULTORES JURÍDICOS S.A.C. me brindó asesoría clara y un acompañamiento constante durante todo mi proceso legal. Gracias a su compromiso, obtuve una solución favorable para mi caso."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-brand-gold rounded-full flex items-center justify-center text-white font-bold">M</div>
+                        <div class="ml-3"><p class="text-white font-medium text-sm">— María G.</p></div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="snap-center shrink-0 w-80 md:w-[400px] bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl">
+                    <div class="text-brand-gold mb-4 text-2xl"><i class="fas fa-quote-left"></i></div>
+                    <h4 class="text-white font-semibold mb-3">Confianza y resultados.</h4>
+                    <p class="text-gray-300 text-sm italic mb-6">"Necesitaba asesoría en un asunto laboral y encontré en AETERNUM un equipo responsable y eficiente."</p>
+                    <div class="flex items-center mt-auto">
+                        <div class="w-10 h-10 bg-brand-gold rounded-full flex items-center justify-center text-white font-bold">C</div>
+                        <div class="ml-3"><p class="text-white font-medium text-sm">— Carlos R.</p></div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="snap-center shrink-0 w-80 md:w-[400px] bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl">
+                    <div class="text-brand-gold mb-4 text-2xl"><i class="fas fa-quote-left"></i></div>
+                    <h4 class="text-white font-semibold mb-3">Servicio jurídico de primer nivel.</h4>
+                    <p class="text-gray-300 text-sm italic mb-6">"Su asesoría en un proceso civil fue fundamental."</p>
+                    <div class="flex items-center mt-auto">
+                        <div class="w-10 h-10 bg-brand-gold rounded-full flex items-center justify-center text-white font-bold">P</div>
+                        <div class="ml-3"><p class="text-white font-medium text-sm">— Patricia M.</p></div>
+                    </div>
+                </div>
+                
+                <!-- Testimonio 4 -->
+                <div class="snap-center shrink-0 w-80 md:w-[400px] bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl">
+                    <div class="text-brand-gold mb-4 text-2xl"><i class="fas fa-quote-left"></i></div>
+                    <h4 class="text-white font-semibold mb-3">Atención personalizada y humana.</h4>
+                    <p class="text-gray-300 text-sm italic mb-6">"Desde la primera consulta recibí un trato cordial y profesional."</p>
+                    <div class="flex items-center mt-auto">
+                        <div class="w-10 h-10 bg-brand-gold rounded-full flex items-center justify-center text-white font-bold">J</div>
+                        <div class="ml-3"><p class="text-white font-medium text-sm">— Jorge A.</p></div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 5 -->
+                <div class="snap-center shrink-0 w-80 md:w-[400px] bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl">
+                    <div class="text-brand-gold mb-4 text-2xl"><i class="fas fa-quote-left"></i></div>
+                    <h4 class="text-white font-semibold mb-3">Recomiendo totalmente sus servicios.</h4>
+                    <p class="text-gray-300 text-sm italic mb-6">"Demostraron experiencia, ética y compromiso."</p>
+                    <div class="flex items-center mt-auto">
+                        <div class="w-10 h-10 bg-brand-gold rounded-full flex items-center justify-center text-white font-bold">D</div>
+                        <div class="ml-3"><p class="text-white font-medium text-sm">— Daniela P.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sistema de Consultas -->
+    <section class="py-24 bg-brand-light dark:bg-[#181818]" id="consultas">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-brand-darkcard rounded-3xl shadow-2xl overflow-hidden reveal">
+                <div class="grid grid-cols-1 md:grid-cols-5">
+                    <div class="md:col-span-2 bg-brand-blue p-10 text-white flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-3xl font-bold mb-4">Reserve su cita</h3>
+                            <p class="text-gray-300 text-sm mb-8">Elija la modalidad que mejor se adapte a sus necesidades. Garantizamos total confidencialidad.</p>
+                            
+                            <ul class="space-y-4 text-sm text-gray-300">
+                                <li class="flex items-center"><i class="fas fa-check-circle text-brand-gold mr-3"></i> Consulta Presencial</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-brand-gold mr-3"></i> Consulta Virtual</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-brand-gold mr-3"></i> Videollamada (Zoom/Meet)</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-brand-gold mr-3"></i> Pago Seguro en Línea</li>
+                            </ul>
+                        </div>
+                        <div class="mt-12">
+                            <p class="text-sm text-gray-400 mb-2">Atención Inmediata</p>
+                            <a href="https://wa.me/51944195323" class="text-xl font-bold text-brand-gold flex items-center gap-2"><i class="fab fa-whatsapp"></i> +51 944195323</a>
+                        </div>
+                    </div>
+                    
+                    <div class="md:col-span-3 p-10">
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Nombre Completo</label>
+                                    <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-brand-dark focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-colors outline-none dark:text-white" placeholder="Ej. Juan Pérez">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Teléfono / Celular</label>
+                                    <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-brand-dark focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-colors outline-none dark:text-white" placeholder="+51 900 000 000">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Correo Electrónico</label>
+                                <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-brand-dark focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-colors outline-none dark:text-white" placeholder="correo@ejemplo.com">
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Tipo de Caso</label>
+                                    <select class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-brand-dark focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-colors outline-none dark:text-white">
+                                        <option>Derecho Civil</option>
+                                        <option>Derecho Penal</option>
+                                        <option>Derecho Laboral</option>
+                                        <option>Derecho Médico</option>
+                                        <option>Conciliación</option>
+                                        <option>Otro</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Modalidad</label>
+                                    <select class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-brand-dark focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-colors outline-none dark:text-white">
+                                        <option>Presencial</option>
+                                        <option>Virtual (Videollamada)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Fecha Deseada</label>
+                                    <input type="date" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-brand-dark focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-colors outline-none dark:text-white">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Hora Sugerida</label>
+                                    <input type="time" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-brand-dark focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-colors outline-none dark:text-white">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Breve descripción del caso</label>
+                                <textarea rows="3" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-brand-dark focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-colors outline-none dark:text-white resize-none" placeholder="Describa brevemente su situación..."></textarea>
+                            </div>
+                            
+                            <button type="button" class="w-full bg-brand-gold hover:bg-brand-goldhover text-white font-bold py-4 rounded-lg transition duration-300 shadow-md">
+                                Reservar Cita y Proceder al Pago
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog / Insights Jurídicos -->
+    <section class="py-24 bg-white dark:bg-brand-dark" id="blog">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12 reveal">
+                <div>
+                    <h2 class="text-brand-gold font-semibold tracking-widest uppercase text-sm mb-2">Insights Jurídicos</h2>
+                    <h3 class="font-serif text-4xl text-brand-blue dark:text-white font-bold">Últimos Artículos</h3>
+                </div>
+                <a href="#" class="hidden sm:block text-brand-gold hover:underline font-medium">Ver todos los artículos <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Artículo 1 -->
+                <article class="group rounded-2xl overflow-hidden bg-brand-light dark:bg-brand-darkcard shadow-sm hover:shadow-xl transition-all duration-300 reveal">
+                    <div class="overflow-hidden aspect-video">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32b7?auto=format&fit=crop&w=800&q=80" alt="Sucesión Intestada" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-xs text-gray-500 dark:text-gray-400 mb-3 space-x-4">
+                            <span><i class="far fa-calendar mr-1"></i> 10 Jul 2026</span>
+                            <span><i class="far fa-clock mr-1"></i> 4 min lectura</span>
+                        </div>
+                        <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white mb-3 group-hover:text-brand-gold transition-colors">¿Cómo tramitar una sucesión intestada en Perú?</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">Guía paso a paso sobre los requisitos y procedimientos cuando un familiar fallece sin dejar testamento.</p>
+                        <div class="flex justify-between items-center border-t border-gray-200 dark:border-gray-700 pt-4">
+                            <span class="text-xs font-semibold text-brand-blue dark:text-white">Por Maycol Calloapaza</span>
+                            <div class="flex space-x-2 text-gray-400">
+                                <i class="fas fa-share-nodes hover:text-brand-gold cursor-pointer transition"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Artículo 2 -->
+                <article class="group rounded-2xl overflow-hidden bg-brand-light dark:bg-brand-darkcard shadow-sm hover:shadow-xl transition-all duration-300 reveal" style="transition-delay: 100ms;">
+                    <div class="overflow-hidden aspect-video">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80" alt="Despido Arbitrario" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-xs text-gray-500 dark:text-gray-400 mb-3 space-x-4">
+                            <span><i class="far fa-calendar mr-1"></i> 05 Jul 2026</span>
+                            <span><i class="far fa-clock mr-1"></i> 5 min lectura</span>
+                        </div>
+                        <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white mb-3 group-hover:text-brand-gold transition-colors">¿Qué hacer ante un despido arbitrario?</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">Conoce tus derechos laborales y los pasos legales inmediatos que debes tomar frente a un cese no justificado.</p>
+                        <div class="flex justify-between items-center border-t border-gray-200 dark:border-gray-700 pt-4">
+                            <span class="text-xs font-semibold text-brand-blue dark:text-white">Por Evelyn Vela</span>
+                            <div class="flex space-x-2 text-gray-400">
+                                <i class="fas fa-share-nodes hover:text-brand-gold cursor-pointer transition"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Artículo 3 -->
+                <article class="group rounded-2xl overflow-hidden bg-brand-light dark:bg-brand-darkcard shadow-sm hover:shadow-xl transition-all duration-300 reveal" style="transition-delay: 200ms;">
+                    <div class="overflow-hidden aspect-video">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" alt="Divorcio mutuo acuerdo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-xs text-gray-500 dark:text-gray-400 mb-3 space-x-4">
+                            <span><i class="far fa-calendar mr-1"></i> 28 Jun 2026</span>
+                            <span><i class="far fa-clock mr-1"></i> 3 min lectura</span>
+                        </div>
+                        <h4 class="font-serif text-xl font-bold text-brand-blue dark:text-white mb-3 group-hover:text-brand-gold transition-colors">Divorcio por mutuo acuerdo (Vía Rápida)</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">Requisitos para acceder al divorcio notarial o municipal y reducir significativamente tiempos y costos.</p>
+                        <div class="flex justify-between items-center border-t border-gray-200 dark:border-gray-700 pt-4">
+                            <span class="text-xs font-semibold text-brand-blue dark:text-white">Por Gabriela Carlos</span>
+                            <div class="flex space-x-2 text-gray-400">
+                                <i class="fas fa-share-nodes hover:text-brand-gold cursor-pointer transition"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="mt-8 text-center sm:hidden">
+                <a href="#" class="text-brand-gold hover:underline font-medium">Ver todos los artículos <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Contacto -->
+    <footer class="bg-brand-blue text-white relative overflow-hidden" id="contacto">
+        <!-- Decoración abstracta -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Branding & Info -->
+                <div class="lg:col-span-4">
+                    <h2 class="font-serif font-bold text-3xl mb-4 tracking-wider">
+                        AETERNUM<br><span class="text-brand-gold text-sm block font-sans tracking-widest uppercase mt-1">Consultores Jurídicos</span>
+                    </h2>
+                    <p class="text-gray-400 text-sm mb-8 leading-relaxed">
+                        Firma legal dedicada a la excelencia, ética y defensa implacable de los derechos de nuestros clientes. Innovación jurídica para la era moderna.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-gold transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-gold transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-gold transition"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-gold transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Enlaces -->
+                <div class="lg:col-span-2">
+                    <h4 class="font-serif text-lg font-bold mb-6 border-b border-white/20 pb-2 inline-block">Navegación</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#inicio" class="hover:text-brand-gold transition">Inicio</a></li>
+                        <li><a href="#nosotros" class="hover:text-brand-gold transition">Sobre Nosotros</a></li>
+                        <li><a href="#equipo" class="hover:text-brand-gold transition">Nuestro Equipo</a></li>
+                        <li><a href="#especializaciones" class="hover:text-brand-gold transition">Áreas de Práctica</a></li>
+                        <li><a href="#blog" class="hover:text-brand-gold transition">Blog Jurídico</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contacto Físico -->
+                <div class="lg:col-span-3">
+                    <h4 class="font-serif text-lg font-bold mb-6 border-b border-white/20 pb-2 inline-block">Contacto</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-brand-gold mt-1 mr-3"></i>
+                            <span>LURIGANCHO - CHOSICA<br>Ñaña Alameda</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-brand-gold mr-3"></i>
+                            <span>+51 944195323</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp text-brand-gold mr-3"></i>
+                            <span>944195323</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-brand-gold mr-3"></i>
+                            <a href="mailto:consultoriojuridicoaeternum@gmail.com" class="hover:text-white transition break-all">consultoriojuridicoaeternum@gmail.com</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock text-brand-gold mt-1 mr-3"></i>
+                            <span>Lunes a Viernes<br>8:30 am - 5:00 pm</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="lg:col-span-3 h-64 lg:h-auto rounded-xl overflow-hidden shadow-lg border border-white/10">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15611.517036034078!2d-76.84333!3d-11.98638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDU5JzExLjAiUyA3NsKwNTAnMzYuMCJX!5e0!3m2!1ses!2spe!4v1680000000000!5m2!1ses!2spe" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2026 AETERNUM CONSULTORES JURÍDICOS S.A.C. Todos los derechos reservados.</p>
+                <div class="space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition">Políticas de Privacidad</a>
+                    <a href="#" class="hover:text-white transition">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botones Flotantes -->
+    <!-- WhatsApp -->
+    <a href="https://wa.me/51944195323" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-lg hover:scale-110 transition-transform z-50 group">
+        <i class="fab fa-whatsapp"></i>
+        <span class="absolute right-16 bg-white dark:bg-brand-darkcard text-gray-800 dark:text-white text-sm px-3 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">¿Necesita ayuda?</span>
+    </a>
+
+    <!-- Volver Arriba -->
+    <button id="scrollTopBtn" class="fixed bottom-24 right-6 bg-brand-blue dark:bg-brand-darkcard border border-brand-gold/30 text-brand-gold w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-lg opacity-0 invisible transition-all duration-300 z-40 hover:bg-brand-gold hover:text-white">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts (Lógica Vanilla JS) -->
+    <script>
+        // 1. Configuración de ScrollReveal (Animaciones premium)
+        const sr = ScrollReveal({
+            origin: 'bottom',
+            distance: '40px',
+            duration: 1000,
+            delay: 100,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)'
+        });
+
+        sr.reveal('.reveal');
+        sr.reveal('.reveal-left', { origin: 'left' });
+        sr.reveal('.reveal-right', { origin: 'right' });
+
+        // 2. Navbar Styling on Scroll & Scroll To Top Button
+        const navbar = document.getElementById('navbar');
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white/90', 'dark:bg-brand-dark/90', 'backdrop-blur-md', 'shadow-md');
+                scrollTopBtn.classList.remove('opacity-0', 'invisible');
+                scrollTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                navbar.classList.remove('bg-white/90', 'dark:bg-brand-dark/90', 'backdrop-blur-md', 'shadow-md');
+                scrollTopBtn.classList.add('opacity-0', 'invisible');
+                scrollTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 3. Dark Mode Toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+        // Comprobar preferencia previa
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+
+        // 4. Menú Móvil
+        const btnMenu = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btnMenu.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // 5. Animación de Contador (Experiencia)
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // The lower the slower
+
+        const runCounters = () => {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const inc = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(runCounters, 30);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        };
+
+        // Ejecutar contador cuando entra en viewport
+        let observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    runCounters();
+                    observer.disconnect(); // Ejecutar solo una vez
+                }
+            });
+        });
+        
+        if(counters.length > 0) {
+            observer.observe(counters[0]);
+        }
+    </script>
+</body>
+</html>
